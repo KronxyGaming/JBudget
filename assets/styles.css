@@ -1,0 +1,192 @@
+/* sidebar menu */
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #537791;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* navigation menu links */
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #c1c0b9;
+    display: block;
+}
+
+/* hover features */
+.sidebar a:hover {
+    color: #e7e6e1;
+}
+
+/* consistent color for each (main body) of the pages */
+body {
+    background-color: #FDF2D8;
+}
+
+/* page content styling */
+.main-content {
+    margin-left: 160px;
+    padding: 20px;
+    flex: 1;
+}
+
+/* transaction area of page */
+.transaction-container {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+/* individual transaction boxes for display */
+.transaction-card {
+    border: 1px solid #537791;
+    padding: 10px;
+    border-radius: 8px;
+    width: 500px;
+    background-color: #e7e6e1;
+}
+
+/* checkbox area */
+.filterDiv {
+    display: block;
+}
+
+/* used to hide transactions when no checkbox is selected */
+.hidden {
+    display: none;
+}
+
+.user-budget {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; /* aligns items to the top if heights are different */
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.budget-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #537791;
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+    background-color: #e7e6e1;
+    overflow-wrap: break-word; /* ensures long text wraps within the card */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 600px;
+    height: 525px;
+    background: #e7e6e1;
+    border-radius: 15px;
+    border: 5px solid #537791;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 10px 0 20px 0;
+    border-bottom: 1px solid #537791;
+}
+
+.center form {
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+
+form .text_field {
+    position: relative;
+    border-bottom: 2px solid #537791;
+    margin: 30px 0;
+}
+
+form .text_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #537791;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.text_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f7f6e7;
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label {
+    top: -5px;
+    color: #e7e6e1;
+}
+
+.submit button{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background-color: #537791;
+    border-radius: 15px;
+    font-size: 16px;
+    color: #f7f6e7;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.submit button:hover{
+    border-color: #e7e6e1;
+    transition: .5s;
+}
+
+.credentials {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #f7f6e7;
+}
+
+.credentials {
+    color: #537791;
+    text-decoration: none;
+}
+
+.credentials a:hover {
+    text-decoration: none;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    position: left;
+}
